@@ -9,6 +9,99 @@
 <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
         <!-- FORM FIELDS HERE -->
+         <fieldset>
+         <legend>Personal Information</legend>
+            <div class="field">
+            <label >Name:</label>
+            <input type="text" name="Firstname" id="name" placeholder="Enter first name" required>
+             </div>
+
+            <div class="field">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter email address" required pattern=[A-Za-z0-9]+@gmail\.com title="Only Google accounts are permitted to register">
+            </div>
+
+            <div class="field">
+                <label >Password:</label>
+                <input type="password" name="password" id="password" pattern=^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{12,}$>
+                </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Preferences</legend>
+                <div class="field">
+                <label for="theme_color">Theme Color</label>
+                <input type="color" name="theme_color" id="theme_color">
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>More Information</legend>
+               <div class="field">
+               <label for="hobbies">Hobbies</label>
+               <input type="text" list="hobbies_list" name="hobbies"  id="hobbies">
+                <datalist id="Hobbies_list">
+                    <option value="Drawing"></option>
+                    <option value="Swimming"></option>
+                    <option value="Dancing"></option>
+                </datalist>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Preferences</legend>
+               <div class="field">
+               <label for="Message">Subscribe to Newsletter</label>
+                <select name="Message" id="message">
+                    <option value="email">Email</option>
+                    <option value="sms">Phone</option>
+                    <option value="Mail">Mail</option>
+
+
+                </select>
+            </div>
+               <input type="checkbox" name="Subscription" value="Subscribed" id="Subscribe"   ></textarea>
+
+            </fieldset>
+
+
+        <fieldset>
+            <legend>More Information</legend>
+               <div class="field">
+               <input type="checkbox" name="Gender[]" value="Male" id="Male"   ></textarea>
+               <label for="Male">Male</label>
+                </div>
+                <div class="field">
+                <input type="checkbox" name="Gender[]" value="Male" id="Male"   ></textarea>
+                <label for="Female">Female</label>
+                </div>
+                <div class="field">
+                <input type="checkbox" name="Gender[]" value="Male" id="Male"   ></textarea>
+                <label for="Other">Other</label>
+                 </div>
+                
+           </fieldset>
+
+        <fieldset>
+            <legend>more Information</legend>
+               <div class="field">
+               <span >Bio:</span>
+                </div>
+            <textarea name="message" placeholder="Despcription" cols="70" rows="10"  ></textarea>
+
+           </fieldset>
+
+           
+
+        <fieldset>
+            <legend>Upload Documents</legend>
+            <label for="resume">Resume</label>
+            <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx,.jpg,.png">
+        </fieldset>
+
+        <div class="field-submit">
+            <button type="submit">Submit Data</button>
+            <button type="reset" >Reset</button>
+        </div>
     </form>
 </body>
 </html>

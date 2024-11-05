@@ -5,12 +5,38 @@ body {
 }
 
 form {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: start;
   background: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 20px auto;
+}
+form legend {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+form #email {
+  width: 30rem;
+}
+form #name {
+  width: 30rem;
+}
+form #password {
+  width: 30rem;
+}
+form .field {
+  padding: 1.5rem;
+}
+form button {
+  padding: 1rem;
+  background: rgb(55, 55, 250);
+  border-radius: 8px;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
